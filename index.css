@@ -1,0 +1,95 @@
+body {
+  width: 300px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-top: 0.8em;
+  text-align: center;
+}
+
+.param {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  margin-right: 20px;
+}
+
+.param p {
+  margin: 0.25em;
+  font-size: 18px;
+}
+
+.info {
+  text-align: center;
+  font-size: 11px;
+  color: #808080;
+  margin: 0;
+  margin-top: 0.4em;
+
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  flex-shrink: 0;
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 21px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  /*box-shadow: 0 0 1px #2196F3;*/
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
